@@ -50,8 +50,8 @@ node ('PASS_CI')
 		{
 			try 
 			{
-				def scannerHome = tool 'SonarQube2.8';
-				withSonarQubeEnv('SonarQube') 
+				def scannerHome = tool 'sonarqube';
+				withSonarQubeEnv('Sonarqube') 
 				{
 					dir('sources') { sh "${scannerHome}/bin/sonar-scanner" }
 				}
